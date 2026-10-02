@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sentiment Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <div class="badge">HUGGING FACE • AI PROJECT</div>
+
+            <h1>AI Sentiment Analyzer</h1>
+            <p class="subtitle">
+                Enter an English sentence and let the AI predict whether
+                the sentiment is positive or negative.
+            </p>
+
+            <label for="textInput">Your text</label>
+            <textarea id="textInput"
+                      placeholder="Example: I really enjoyed this movie!"
+                      maxlength="1000"></textarea>
+
+            <div class="row">
+                <span id="counter">0 / 1000</span>
+                <button id="analyzeBtn">Analyze Sentiment</button>
+            </div>
+
+            <div id="message" class="message hidden"></div>
+
+            <section id="result" class="result hidden">
+                <p class="result-title">AI Prediction</p>
+                <div id="label" class="label">POSITIVE</div>
+
+                <div class="score-box">
+                    <div class="score-header">
+                        <span>Confidence</span>
+                        <strong id="score">0%</strong>
+                    </div>
+                    <div class="progress">
+                        <div id="progressBar"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="examples">
+                <p>Try an example:</p>
+                <button class="example">I love this product. It is amazing!</button>
+                <button class="example">This service was terrible and disappointing.</button>
+            </div>
+        </section>
+
+        <footer>
+            Powered by Python, Flask and Hugging Face Transformers
+        </footer>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
