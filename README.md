@@ -1,77 +1,69 @@
-# AI Sentiment Analyzer
+# 🤖 English Text Sentiment Analysis
 
-A classroom project using a pre-trained Hugging Face model.
+A web-based **AI sentiment analysis** application that classifies English text as **Positive** or **Negative** using **Python, Flask, and Hugging Face**.
 
-## Model
+## 📌 About the Project
 
-Model:
-`distilbert/distilbert-base-uncased-finetuned-sst-2-english`
+This project is a simple AI-powered web application for analyzing the sentiment of English text.
 
-Task:
-Sentiment analysis / text classification.
+Users can enter an English sentence or text, and the application uses a pre-trained Hugging Face model to predict whether the sentiment is positive or negative.
 
-The model predicts two labels:
-- POSITIVE
-- NEGATIVE
+## 🛠️ Technologies
 
-The model is trained for English sentiment classification using the SST-2 task.
+* 🐍 Python
+* 🌐 Flask
+* 🤗 Hugging Face
+* 📄 HTML5
+* 🎨 CSS3
+* ⚡ JavaScript
+* 🔢 NumPy
+* 🐼 Pandas
 
-## Technologies
+## ✨ Features
 
-- Python
-- Flask
-- Hugging Face Transformers
-- PyTorch
-- HTML
-- CSS
-- JavaScript
+* 💬 English text sentiment analysis
+* 👍 Positive / Negative classification
+* 📱 Responsive web interface
+* 🌐 Flask backend
+* 🤖 Pre-trained Hugging Face model
+* ⚡ JavaScript interaction
 
-## Installation
+## 📂 Project Structure
 
-Open a terminal in this project folder.
-
-### 1. Create a virtual environment
-
-Windows:
-
-```bash
-python -m venv venv
-venv\Scripts\activate
+```text
+sentiment-analysis/
+├── 📁 static/
+│   ├── 📄 script.js
+│   └── 🎨 style.css
+├── 📁 templates/
+│   └── 🌐 index.html
+├── 🐍 app.py
+├── 📦 requirements.txt
+└── 📖 README.md
 ```
 
-If PowerShell blocks activation, use:
+## 🔄 How It Works
 
-```powershell
-venv\Scripts\Activate.ps1
-```
+1. ✍️ The user enters English text.
+2. 📤 The text is sent to the Flask backend.
+3. 🤖 The Hugging Face model analyzes the text.
+4. 📊 The application determines the sentiment.
+5. 🖥️ The result is displayed on the webpage.
 
-### 2. Install dependencies
+## 🎯 Project Purpose
 
-```bash
-pip install -r requirements.txt
-```
+This project was created to practice:
 
-### 3. Run the project
+* 🐍 Python programming
+* 🌐 Flask web development
+* 🤖 Using pre-trained AI models
+* 🤗 Hugging Face integration
+* 💻 HTML, CSS, and JavaScript
+* 🚀 Building an AI-powered web application
 
-```bash
-python app.py
-```
+## 👨‍💻 Developer
 
-The first run downloads the model from Hugging Face, so it can take some time.
+**Hirad Ghafari**
 
-Then open:
+🔗 GitHub: https://github.com/hiradgh2010
 
-http://127.0.0.1:5000
-
-## Test examples
-
-Positive:
-
-`I love this product. It is amazing!`
-
-Negative:
-
-`This service was terrible and disappointing.`
-
-Important:
-This model is designed for English text. Its predictions should not be treated as perfect or as a human understanding of emotions.
